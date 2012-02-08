@@ -1,6 +1,8 @@
-This is my Privoxy configuration.
+This is my Privoxy configuration. It blocks common trackers and ads.
 
-NOTE: My configuration blocks Facebook. 
+NOTE: My configuration blocks Facebook. If you don't want this, comment out the following line in /usr/local/etc/privoxy/config:
+
+    actionsfile block-facebook.action
 
 
 Installing on Mac OS X

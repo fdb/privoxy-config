@@ -1,0 +1,68 @@
+# Documentation: http://www.privoxy.org/user-manual/actions-file.html
+
+{ +filter{plusone}}
+/
+
+{+block{Block Yahoo Analytics}}
+s.yimg.com
+.analytics.yahoo.com
+
+{+block{Block Google Analytics and ads}}
+.google-analytics.
+.googleadservices.com
+plusone.google.com
+.googlesyndication.com
+
+{+block{Block Twitter buttons}}
+platform.twitter.com/widgets
+
+{+block{Block other trackers}}
+.insites.
+.metriweb.be
+.adhese.be
+.scorecardresearch.
+.2mdn.
+.doubleclick.
+.tacoda.
+.revsci.
+.chartbeat.
+.addthis.
+.sharethis.
+.z5x.
+.pgmediaserve.
+.quantserve.
+.observerapp.
+.postrank.
+.reinvigorate.
+.lloogg.
+.disqus.com
+.krxd.
+.ethnio.
+.ethn.io
+.quantserve.
+.scorecardresearch.
+cs.pebblemedia.be
+messagent.vummail.be
+rcapp.persgroep.be
+cdn.ad4game.com
+content.yieldmanager.edgesuite.net
+ad.adorika.com
+aka-cdn-ns.adtech.de
+bs.serving-sys.com
+pagead2.googlesyndication.com
+.gaug.es
+.technorati.com
+.stumbleupon.com
+.stumble-upon.com
+cdn.onswipe.com
+.zdbb.net
+.reddit.com/static/button.*
+buttons.reddit.com
+.betrad.com
+/metriweb.*
+
+{+block{Block web bugs} +handle-as-image}
+.2mdn./.*\.[gif|jpg|png]
+feeds.feedburner.com
+.feedburner.com/.*[gif|jpg|png]$
+s.ytimg.com/.*pixel.*gif$

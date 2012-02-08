@@ -1,16 +1,15 @@
+# Location of the configuration files
 confdir /usr/local/etc/privoxy
 templdir /usr/local/etc/privoxy/templates
 logdir /usr/local/var/log/privoxy
 
 actionsfile match-all.action # Actions that are applied to all sites and maybe overruled later on.
-#actionsfile default.action   # Main actions file
-actionsfile user.action      # User customizations
-
-#filterfile default.filter
-filterfile user.filter      # User customizations
+actionsfile block-trackers.action # Block all trackers. This is the core script.
+actionsfile block-facebook.action # Block Facebook. Remove this if you find it too restrictive.
+filterfile plus-one.filter # Block Google's plus one script.
 
 listen-address 127.0.0.1:8118
-toggle  1
+toggle 1
 
 enable-edit-actions 1
 
