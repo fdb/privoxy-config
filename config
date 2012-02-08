@@ -1,0 +1,46 @@
+confdir /usr/local/etc/privoxy
+templdir /usr/local/etc/privoxy/templates
+logdir /usr/local/var/log/privoxy
+
+actionsfile match-all.action # Actions that are applied to all sites and maybe overruled later on.
+#actionsfile default.action   # Main actions file
+actionsfile user.action      # User customizations
+
+#filterfile default.filter
+filterfile user.filter      # User customizations
+
+listen-address 127.0.0.1:8118
+toggle  1
+
+enable-edit-actions 1
+
+enforce-blocks 0
+
+keep-alive-timeout 5
+socket-timeout 300
+
+# Tor Configuration
+#
+# To chain Privoxy and Tor, both running on the same system:
+# forward-socks5   /               127.0.0.1:9050 .
+
+# The public Tor network can't be used to reach your local network,
+# if you need to access local servers you therefore might want
+# to make some exceptions:
+#
+# forward         192.168.*.*/     .  
+# forward         10.*.*.*/        .  
+# forward         127.*.*.*/       .
+#
+# Unencrypted connections to systems in these address ranges will
+# be as (un) secure as the local network is, but the alternative
+# is that you can't reach the local network through Privoxy at
+# all. Of course this may actually be desired and there is no
+# reason to make these exceptions if you aren't sure you need them.
+#
+# If you also want to be able to reach servers in your local
+# network by using their names, you will need additional exceptions
+# that look like this:
+#
+#  forward           localhost/     .
+
