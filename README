@@ -1,0 +1,26 @@
+This is my Privoxy configuration.
+
+NOTE: My configuration blocks Facebook. 
+
+
+Installing on Mac OS X
+======================
+
+    # Install Privoxy through Homebrew
+    brew install privoxy
+
+    # Move the original Privoxy configuration out of the way.
+    mv /usr/local/etc/privoxy/ /usr/local/etc/orig.privoxy
+
+    # Clone the new Privoxy configuration into /usr/local/etc/privoxy
+    git clone git://github.com/fdb/privoxy-config.git /usr/local/etc/privoxy
+
+    # Copy the launch agent script to the global launch agents.
+    sudo cp /usr/local/etc/privoxy/launch-agent/org.privoxy.privoxy.plist /Library/LaunchAgents/
+
+    # Change the user permissions to root (Otherwise the script will not load)
+    sudo chown root:wheel /Library/LaunchAgents/org.privoxy.privoxy.plist 
+
+    # Load and start the script now.
+    launchctl load /Library/LaunchAgents/org.privoxy.privoxy.plist 
+    launchctl start org.privoxy.privoxy
