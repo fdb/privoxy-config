@@ -33,6 +33,7 @@ platform.twitter.com/widgets
 .quantserve.
 .observerapp.
 .postrank.
+.channelintelligence.com
 .reinvigorate.
 .lloogg.
 .disqus.com
@@ -41,6 +42,7 @@ platform.twitter.com/widgets
 .ethn.io
 .quantserve.
 .scorecardresearch.
+.atwola.
 cs.pebblemedia.be
 messagent.vummail.be
 rcapp.persgroep.be
@@ -60,9 +62,16 @@ cdn.onswipe.com
 buttons.reddit.com
 .betrad.com
 /metriweb.*
+stats.wordpress.com
+metrics.amd.com
+tweetmeme.com
 
 {+block{Block web bugs} +handle-as-image}
 .2mdn./.*\.[gif|jpg|png]
 feeds.feedburner.com
 .feedburner.com/.*[gif|jpg|png]$
 s.ytimg.com/.*pixel.*gif$
+
+{+block{Block pocker sites} }
+.eurogrand.com
+
