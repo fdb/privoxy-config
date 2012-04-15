@@ -13,8 +13,6 @@
   <true/>
   <key>KeepAlive</key>
   <false/>
-  <key>UserName</key>
-  <string>fdb</string>
   <key>WorkingDirectory</key>
   <string>/usr/local/etc/privoxy</string>
   <key>StandardErrorPath</key>
